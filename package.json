@@ -1,4 +1,4 @@
-
+{
   "name": "parse-dashboard-example",
   "version": "1.0.2",
   "description": "An example Parse Dashboard server using the parse-dashboard module",
