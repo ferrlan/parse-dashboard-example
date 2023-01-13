@@ -9,7 +9,6 @@ let localParseServer = 'http://localhost:1337/parse';
 let herokuParseServer = 'https://my-parse-dashboard.herokuapp.com/parse';
 
 var dashboard = new ParseDashboard({
-  cookieSessionSecret: 'your-secret-here',
   apps: [
     {
       appId: process.env.APP_ID || 'myAppId',
@@ -22,6 +21,8 @@ var dashboard = new ParseDashboard({
     { user: process.env.USERNAME, pass: process.env.PASSWORD }
   ],
   trustProxy: 1
+}, {
+  cookieSessionSecret: 'your-secret-here'
 });
 
 var app = express();
