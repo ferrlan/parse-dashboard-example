@@ -9,6 +9,7 @@ let localParseServer = 'http://localhost:1337/parse';
 let herokuParseServer = 'https://my-parse-dashboard.herokuapp.com/parse';
 
 var dashboard = new ParseDashboard({
+  cookieSessionSecret: 'your-secret-here',
   apps: [
     {
       appId: process.env.APP_ID || 'myAppId',
